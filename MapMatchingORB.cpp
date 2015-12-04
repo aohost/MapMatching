@@ -122,10 +122,7 @@ void OrbFeaturesFinder_zk::find(const Mat &image, ImageFeatures &features)
                 //     << "gray_image.dims=" << gray_image.dims << "\n");
 
                 Mat gray_image_part=gray_image(Range(yl, yr), Range(xl, xr));
-                // LOGLN("OrbFeaturesFinder::find: gray_image_part.empty=" << (gray_image_part.empty()?"true":"false") << ", "
-                //     << " gray_image_part.size()=(" << gray_image_part.size().width << "x" << gray_image_part.size().height << "), "
-                //     << " gray_image_part.dims=" << gray_image_part.dims << ", "
-                //     << " gray_image_part.data=" << ((size_t)gray_image_part.data) << "\n");
+                
 
                 (*orb)(gray_image_part, Mat(), points, descriptors);
 
